@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # flutter_application_1
+=======
+# sports_app
+>>>>>>> 871103ef31c1b0b0f38ca9d1d446e8ab3296562b
 
 A new Flutter project.
 
