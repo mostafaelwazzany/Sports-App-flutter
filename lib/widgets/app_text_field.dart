@@ -8,6 +8,7 @@ class AppTextField extends StatelessWidget {
     this.prefixIcon = Icons.email_outlined,
     this.suffixIcon,
     this.obscureText = false,
+    this.textInputType,
   });
 
   final String? label;
@@ -15,10 +16,12 @@ class AppTextField extends StatelessWidget {
   final IconData prefixIcon;
   final IconData? suffixIcon;
   final bool obscureText;
+  final TextInputType? textInputType;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      keyboardType: textInputType,
       obscureText: obscureText,
       decoration: InputDecoration(
         labelText: label,

@@ -1,21 +1,60 @@
-<<<<<<< HEAD
-# flutter_application_1
-=======
-# sports_app
->>>>>>> 871103ef31c1b0b0f38ca9d1d446e8ab3296562b
+# Sports App
 
-A new Flutter project.
+Simple Flutter UI project for a sports shopping app.
 
-## Getting Started
+## Screens
 
-This project is a starting point for a Flutter application.
+- `Login`
+- `Sign Up`
+- `Home`
+- `All Products`
+- `Profile`
+- `Settings`
 
-A few resources to get you started if this is your first Flutter project:
+## Navigation
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+The project uses named routes from `main.dart`.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Routes:
+
+- `/login`
+- `/signup`
+- `/home`
+- `/shop`
+- `/profile`
+- `/settings`
+
+Bottom navigation is shared in:
+
+- `lib/widgets/app_bottom_nav.dart`
+
+## Run
+
+```bash
+flutter pub get
+flutter run
+```
+
+## Test
+
+```bash
+flutter analyze
+flutter test
+```
+
+## Project Structure
+
+```text
+lib/
+  constants/
+  screens/
+  widgets/
+  main.dart
+```
+
+## Notes
+
+- `Login` opens `Home`
+- `Create Account` opens `Sign Up`
+- `Sign Up` opens `Home`
+- Bottom nav moves between `Home`, `Shop`, `Profile`, and `Settings`
