@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants/app_colors.dart';
-import 'package:flutter_application_1/screens/home_screen.dart';
-import 'package:flutter_application_1/screens/signup_screen.dart';
+import 'package:flutter_application_1/constants/app_routes.dart';
 import 'package:flutter_application_1/widgets/app_button.dart';
 import 'package:flutter_application_1/widgets/app_text_field.dart';
 
@@ -58,7 +57,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 28),
                   const AppTextField(
-                    hintText: 'student@flutter.dev',
+                    hintText: 'mostafawazzany@gmail.com',
                     prefixIcon: Icons.mail_outline,
                   ),
                   const SizedBox(height: 12),
@@ -88,12 +87,7 @@ class LoginScreen extends StatelessWidget {
                     child: AppButton(
                       buttonLabel: 'Login',
                       onPressed: () {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const HomeScreen(),
-                          ),
-                        );
+                        Navigator.pushReplacementNamed(context, AppRoutes.home);
                       },
                     ),
                   ),
@@ -105,12 +99,7 @@ class LoginScreen extends StatelessWidget {
                       buttonLabel: 'Create Account',
                       isOutlined: true,
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const SignupScreen(),
-                          ),
-                        );
+                        Navigator.pushNamed(context, AppRoutes.signup);
                       },
                     ),
                   ),

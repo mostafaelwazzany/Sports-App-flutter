@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/home_screen.dart';
-import 'package:flutter_application_1/screens/profile_screen.dart';
-import 'package:flutter_application_1/screens/settings_screen.dart';
-import 'package:flutter_application_1/screens/shop_screen.dart';
+import 'package:flutter_application_1/constants/app_routes.dart';
 
 class AppBottomNav extends StatelessWidget {
   const AppBottomNav({
@@ -23,22 +20,17 @@ class AppBottomNav extends StatelessWidget {
           return;
         }
 
-        Widget page = const HomeScreen();
+        String route = AppRoutes.home;
 
         if (index == 1) {
-          page = const ShopScreen();
+          route = AppRoutes.shop;
         } else if (index == 2) {
-          page = const ProfileScreen();
+          route = AppRoutes.profile;
         } else if (index == 3) {
-          page = const SettingsScreen();
+          route = AppRoutes.settings;
         }
 
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => page,
-          ),
-        );
+        Navigator.pushReplacementNamed(context, route);
       },
       items: const [
         BottomNavigationBarItem(
