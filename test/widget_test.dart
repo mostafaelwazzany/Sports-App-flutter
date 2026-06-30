@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_application_1/main.dart';
 
 void main() {
-  testWidgets('Login opens home and bottom nav opens settings', (
+  testWidgets('Login opens home and shop page opens from bottom nav', (
     WidgetTester tester,
   ) async {
     await tester.pumpWidget(const MyApp());
@@ -14,12 +14,12 @@ void main() {
     await tester.tap(find.widgetWithText(ElevatedButton, 'Login'));
     await tester.pumpAndSettle();
 
-    expect(find.text('New Collection'), findsOneWidget);
+    expect(find.text('Discover'), findsOneWidget);
 
-    await tester.tap(find.text('Settings'));
+    await tester.tap(find.text('Shop'));
     await tester.pumpAndSettle();
 
-    expect(find.text('GENERAL'), findsOneWidget);
-    expect(find.text('Dark Mode'), findsOneWidget);
+    expect(find.text('All Products'), findsOneWidget);
+    expect(find.text('Pro Soccer Ball'), findsOneWidget);
   });
 }
