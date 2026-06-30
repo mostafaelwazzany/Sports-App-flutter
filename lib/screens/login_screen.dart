@@ -57,11 +57,13 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 28),
                   const AppTextField(
+                    textInputType: TextInputType.emailAddress,
                     hintText: 'mostafawazzany@gmail.com',
                     prefixIcon: Icons.mail_outline,
                   ),
                   const SizedBox(height: 12),
                   const AppTextField(
+                    textInputType: TextInputType.visiblePassword,
                     hintText: 'password123',
                     prefixIcon: Icons.lock_outline,
                     obscureText: true,
